@@ -75,7 +75,7 @@ text = pytesseract.image_to_string(imgRoi, lang="eng")
 print(text)
 
 def get_vechicle_info():
-    r = requests.get("https://www.regcheck.org.uk/api/reg.asmx/CheckIndia?RegistrationNumber={}&username=NiteshThapliyal".format(str(text2)))
+    r = requests.get("https://www.regcheck.org.uk/api/reg.asmx/CheckIndia?RegistrationNumber={}&username=xyz".format(str(text2)))
     data = xmltodict.parse(r.content) ## converting xml to dictionary
     jdata = json.dumps(data) ### converting dictionary to json
     df = json.loads(jdata)
