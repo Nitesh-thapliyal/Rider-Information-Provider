@@ -1,6 +1,7 @@
 # Rider Information Provider (RIP)
 
-![RIP]()
+![RIP](https://github.com/Nitesh-thapliyal/Rider-Information-Provider/blob/master/src/rip.png)
+
 It is an web app that captures the Vehicle image, detects the number plate and then crop the license plate from the image.
 Then using the OCR it extracts the license number from the image and by using the RTO api it gets the detail of vechile owner.
 
