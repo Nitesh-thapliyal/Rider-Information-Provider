@@ -1,0 +1,236 @@
+<div class="flex-container">
+
+    <div class="flex-child magenta">
+        <img src="/src/car1.png" style="width: 660px; height: 610;">
+    </div>
+    
+    <div class="flex-child green">
+      <!-- <h1>RTO NOTIFIER</h1> -->
+      <h1>Rider Info Provider  <img src="/src/caricon1.png" alt="logo" /></h1><br>
+      <h3>Rider Information Provider(RIP) helps user to get the information of the vehicle owner.
+         User can get the information of the vechile owner just by using its license plate number<br> 
+          This is benefitial for Traffic police man as it can detect vechicle parked in no parking zone</h3>
+     <!-- <form action="/vehicle" method="POST" enctype="multipart/form-data" id="form1">
+        <div class="upload-btn-wrapper">
+          <button class="btnn">Upload a file</button>
+          <input type="file" name="file"/>
+        </div><-->
+        <!-- <div class="button-wrapper">
+            <span class="label">
+              Upload File
+            </span>
+            
+              <input type="file" name="file" id="upload" class="upload-box" placeholder="Upload File">
+            
+          </div> -->
+        <div class="text-input">
+            <input type="text" id="input1" placeholder="Enter IP" name="message" autocomplete="off">
+            <label for="input1">Enter Ip of IP webcam </label>
+          </div><br><br>
+       
+        <input type="submit" value="Connect" class="btn">
+      
+      </form>
+    </div>
+    </div>
+    
+  </div>
+<style>
+  .flex-container {
+    display: flex;
+
+}
+
+.flex-child {
+    flex: 1;
+    /* border: 2px solid yellow; */
+    padding-left: 20px;
+}  
+
+
+.flex-child:first-child {
+    margin-right: 20px;
+}
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+h1{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+h1 {
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Anonymous Pro','Source Code Pro', monospace;  
+  font-size: 45px;
+  text-transform: capitalize;
+  font-weight: 1500;
+
+  color: rgb(39, 39, 39);
+  
+}
+
+/* Animation */
+h1 {
+  animation: animated-text 2s steps(30,end) 1s 1 normal both;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 550px;}
+}
+
+h3{
+  overflow: hidden;    
+  font-family:  monospace;
+  color: gray;
+
+}
+.button-wrapper {
+  position: relative;
+  width: 150px;
+  text-align: center;
+  margin: 15% auto;
+  border-radius: 20;
+  
+  
+
+}
+
+.button-wrapper span.label {
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  width: 100%;
+  background: #EFB700;
+  cursor: pointer;
+  color: #fff;
+  padding: 10px 0;
+  text-transform:uppercase;
+  font-size:12px;
+  
+}
+
+#upload {
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 50px;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+@import  url(https://fonts.googleapis.com/css?family=Montserrat);
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Montserrat;
+
+}
+
+.text-input{
+  
+  position: relative;
+  margin-top: 50px;
+  margin-left: 20px;
+}  
+  input[type="text"]{
+    display: inline-block;
+    width: 500px;
+    height: 40px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    padding: 10px 10px 10px 100px;
+    transition: all 0.1s ease-out;
+  }
+  
+  input[type="text"] + label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    border-radius: 3px 0 0 3px;
+    padding: 0 20px;
+    background: #EFB700;
+    transform: translateZ(0) translateX(0);
+    transition: all 0.3s ease-in;
+    transition-delay: 0.2s;
+  }
+  
+  input[type="text"]:focus + label{
+    transform: translateY(-120%) translateX(0%);
+    border-radius: 3px;
+    transition: all 0.1s ease-out;
+  }
+  
+  input[type="text"]:focus{
+    padding: 10px;
+    transition: all 0.3s ease-out;
+    transition-delay: 0.2s;
+  }
+
+  .btn {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin-left: 260px;
+  border-radius: 10px;
+}
+
+
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  margin-top: 28px;
+  margin-left: 200px;
+  margin-bottom: 20px;
+}
+
+.btnn {
+  border: 2px solid gray;
+  color: gray;
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+</style>
+<!-- <script>
+    function myFunction() {
+  var message = document.getElementById("input1").value;
+  var age = document.getElementById("age").value;
+  var fname = document.getElementById("fname").value;
+  submitOK = "true";
+
+  
+}
+</script> -->
