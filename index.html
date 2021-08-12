@@ -1,0 +1,60 @@
+<script>
+    function lw() {
+    
+    var i = document.getElementById("inp").value
+    
+    var xhr = new XMLHttpRequest();
+    
+    
+    xhr.open("GET","http://localhost/cgi-bin/RIP/rto.py?x="+i,true);
+    xhr.send();
+    
+    xhr.onload = function() {
+        var output = xhr.responseText;
+        document.getElementById("d1").innerHTML = output;
+        }
+    }
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Rider Information Provider</title>
+<link rel="stylesheet" href="style.css">
+
+<body>
+<div class="flex-container">
+        <div class="flex-child magenta">
+            <img src="src/car1.png" style="width: 660px; height: 610;">
+        </div>
+        
+        <div class="flex-child green">
+          <!-- <h1>RTO NOTIFIER</h1> -->
+          <h1>Rider Info Provider  <img src="src/caricon1.png" alt="logo" /></h1><br>
+
+        <!--    <div class="text-input">
+                <input type="text" id="plate-no" placeholder="Enter number">
+                <label for="input1">Enter License plate number </label>
+              </div><br><br>
+           
+            <button type="submit" onclick="lw()" class="btn">submit</button>
+          
+          </form>
+        </div>
+        </div> -->
+        
+        <div class="text-input">
+        <input type= "text" id="inp" placeholder= "Enter License plate number">
+        <label for="input1">Enter License plate number </label>
+        </div>
+        <br><br>
+        <button id="submit" onclick="lw()" class="btn">submit</button>
+        <br>
+        
+        <div id="d1">
+        </div>
+</body>
+</head>
+</html>

@@ -1,0 +1,138 @@
+.flex-container {
+  display:flex;
+  padding-left: 2px;
+}
+
+.flex-child {
+    flex:1;
+    /* border: 2px solid yellow; */
+    padding-left: 20px
+}  
+
+
+.flex-child:first-child {
+    margin-right: 20px;
+}
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+h1{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+h1 {
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Anonymous Pro','Source Code Pro', monospace;  
+  font-size: 45px;
+  text-transform: capitalize;
+  font-weight: 1500;
+
+  color: rgb(39, 39, 39);
+  
+}
+
+/* Animation */
+h1 {
+  animation: animated-text 2s steps(30,end) 1s 1 normal both;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 550px;}
+}
+
+
+.button-wrapper {
+  position: relative;
+  width: 150px;
+  text-align: center;
+  margin: 15% auto;
+  border-radius: 20;
+
+}
+
+.button-wrapper span.label {
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  width: 100%;
+  background: #EFB700;
+  cursor: pointer;
+  color: #fff;
+  padding: 10px 0;
+  text-transform:uppercase;
+  font-size:12px;
+  
+}
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Montserrat;
+}
+
+.text-input{
+  
+  position: relative;
+  margin-top: 50px;
+  margin-left: 20px;
+}  
+  input[type="text"]{
+    display: inline-block;
+    width: 500px;
+    height: 40px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    padding: 10px 10px 10px 100px;
+    transition: all 0.1s ease-out;
+  }
+  
+  input[type="text"] + label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    border-radius: 3px 0 0 3px;
+    padding: 0 20px;
+    background: #EFB700;
+    transform: translateZ(0) translateX(0);
+    transition: all 0.3s ease-in;
+    transition-delay: 0.2s;
+  }
+  
+  input[type="text"]:focus + label{
+    transform: translateY(-120%) translateX(0%);
+    border-radius: 3px;
+    transition: all 0.1s ease-out;
+  }
+  
+  input[type="text"]:focus{
+    padding: 10px;
+    transition: all 0.3s ease-out;
+    transition-delay: 0.2s;
+  }
+
+  .btn {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin-left: 260px;
+  border-radius: 10px;
+}
